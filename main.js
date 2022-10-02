@@ -19,6 +19,7 @@ app.listen(port, ()=>{
 // ROUTING
 // ===============================================================================
 app.get("/", (req, resp)=>{
+  resp.header("Access-Control-Allow-Origin", "*");
   resp.send("hi!");
 })
 app.get("/api/index", async (req, resp)=>{
@@ -28,6 +29,7 @@ app.get("/api/index", async (req, resp)=>{
         latestPost = post;
     };
     const index = latestPost.sNum;
+    resp.header("Access-Control-Allow-Origin", "*");
     resp.send({latest: index});
 });
 
@@ -54,5 +56,6 @@ app.get("/api/loadmore", async (req, resp)=>{
     }
 
     reply = {postLists, usernameList};
+    resp.header("Access-Control-Allow-Origin", "*");
     resp.send(reply);
 });
