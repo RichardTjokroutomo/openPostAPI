@@ -18,6 +18,9 @@ app.listen(port, ()=>{
 
 // ROUTING
 // ===============================================================================
+app.get("/", (req, resp)=>{
+  resp.send("hi!");
+})
 app.get("/api/index", async (req, resp)=>{
     const allPosts = await Post.find({});
     let latestPost = {};
