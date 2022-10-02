@@ -18,7 +18,7 @@ app.listen(port, ()=>{
 
 // ROUTING
 // ===============================================================================
-app.get("api/index", async (req, resp)=>{
+app.get("/api/index", async (req, resp)=>{
     const allPosts = await Post.find({});
     let latestPost = {};
     for(let post of allPosts){
@@ -28,7 +28,7 @@ app.get("api/index", async (req, resp)=>{
     resp.send({latest: index});
 });
 
-app.get("api/loadmore", async (req, resp)=>{
+app.get("/api/loadmore", async (req, resp)=>{
     const {latest_index, posts_loaded} = req.query;
     const startingSnum = latest_index-posts_loaded;
 
