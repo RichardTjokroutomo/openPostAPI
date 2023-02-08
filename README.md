@@ -7,7 +7,7 @@ This is an API used by the [openPost web app](https://openpost.adaptable.app/) t
 ## How the API is used
 
 Here's how it basically works:
-[working diagram](/images/HTTP_commands_pic.png)
+![working diagram](/images/HTTP_commands_pic.png)
 
 Basically:
 1) the website (OpenPost) will continuously send HTTP requests asking for the index of the latest post (over 2 second interval)
@@ -16,5 +16,5 @@ Basically:
 
 
 Here are the HTTP commands:
-[HTTP commands](/images/HTTP_commands_pic.png)
+![HTTP commands](/images/HTTP_commands_pic.png)
 
